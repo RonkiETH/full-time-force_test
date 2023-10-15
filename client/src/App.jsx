@@ -1,10 +1,10 @@
 import React from 'react'
+import Commits from './components/Commits'
+
 
 const App = () => {
   return (
-      <h1 className='text-3xl font-bold underline'>
-        Hello world!
-      </h1>
+    <Commits />
   )
 }
 
