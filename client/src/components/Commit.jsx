@@ -8,19 +8,19 @@ const formatDate = dateString => {
 const Commit = ({ commit }) => {
     console.log('Commit data:', commit);
     return (
-        <li key={commit.sha}>
-        <strong>Commit: </strong>
-        <a
-            href={`https://github.com/RonkiETH/full-time-force_test/commit/${commit.sha}`}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            {commit.commit.message}
-        </a>
-        <br />
-        <strong>Fecha y hora: </strong>
-        {formatDate(commit.commit.author.date)}
-        </li>
+        <div key={commit.sha} className="p-4 border rounded-lg shadow-md mb-4">
+            <strong className="block text-black text-lg mb-2">Commit:</strong>
+            <a
+                href={`https://github.com/RonkiETH/full-time-force_test/commit/${commit.sha}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 font-semibold hover:underline"
+            >
+                {commit.commit.message}
+            </a>
+            <br />
+            <p className="text-gray-600 inline text-sm">Fecha y hora: {formatDate(commit.commit.author.date)}</p> 
+        </div>
     );
 };
 

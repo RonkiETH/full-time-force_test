@@ -1,10 +1,15 @@
 import React from 'react'
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Commits from './components/Commits'
-
+import './index.css'
+import Header from './components/Header';
 
 const App = () => {
   return (
-    <Commits />
+    <BrowserRouter>
+      <Header />
+      <Commits />
+    </BrowserRouter>
   )
 }
 

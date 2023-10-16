@@ -20,14 +20,14 @@ const Commits = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Historial de Commits</h1>
+        <div className="w-1/2 mx-auto">
+            <h1 className='font-extrabold text-[#222328] text-[32px]'>Historial de Commits</h1>
             {commits.length > 0 ? (
-                <ul>
+                <div>
                     {commits.map(commit => (
                         <Commit key={commit.sha} commit={commit} />
                     ))}
-                </ul>
+                </div>
             ) : (
                 <p>No hay commits disponibles.</p>
             )}
