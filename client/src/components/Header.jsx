@@ -8,7 +8,7 @@ const Header = () => {
             <img src={logo} alt="logo" className="w-70 h-20 mx-5" />
         </div>
         <div className="flex items-center">
-            <h2 className='font-extrabold text-[#222328] text-[25px]'>Mi Aplicación</h2>
+            <h2 className='font-extrabold text-[#222328] text-[25px]'>Full Time Force Test</h2>
         </div>
         </header>
     );

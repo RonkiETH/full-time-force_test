@@ -19,7 +19,7 @@ const Commit = ({ commit, commitNumber }) => {
                 {commit.commit.message}
             </a>
             <br />
-            <p className="text-gray-600 inline text-sm">Fecha y hora: {formatDate(commit.commit.author.date)}</p> 
+            <p className="text-gray-600 inline text-sm">Date & Hour: {formatDate(commit.commit.author.date)}</p> 
         </div>
     );
 };

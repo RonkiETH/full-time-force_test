@@ -29,7 +29,7 @@ const Commits = () => {
 
     return (
         <div className="w-1/2 mx-auto">
-            <h1 className='font-extrabold text-[#222328] text-[32px]'>Historial de Commits</h1>
+            <h1 className='font-extrabold text-[#222328] text-[32px]'>Commit History</h1>
             {commits.length > 0 ? (
                 <div>
                     {commits.map(commit => (
