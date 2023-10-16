@@ -19,7 +19,7 @@ npm install
 cd ..
 ```
 
-**Server side - Install dependencies**
+**#3 Server side - Install dependencies**
 ```bash
 cd server 
 npm install
@@ -39,13 +39,13 @@ To run this project, you will need to create a **.env** file in the **server** f
 
 To run this project, open two new terminals:
 
-**#2 Client side**
+**#Client side**
 ```bash
 cd client
 npm run dev
 ```
 
-**Server side - Install dependencies**
+**Server side**
 ```bash
 cd server 
 npm start
