@@ -10,7 +10,15 @@ const Commits = () => {
             try {
                 const response = await axios.get('http://localhost:3001/commits');
                 console.log('API response:', response.data);
-                setCommits(response.data.commits);
+
+                const totalCommits = response.data.commits.length;
+
+                const commitsWithNumbers = response.data.commits.map((commit, index) => ({
+                    ...commit,
+                    commitNumber: totalCommits - index
+                }));
+
+                setCommits(commitsWithNumbers);
             } catch (error) {
                 console.error('Error fetching commits:', error.message);
             }
@@ -25,7 +33,7 @@ const Commits = () => {
             {commits.length > 0 ? (
                 <div>
                     {commits.map(commit => (
-                        <Commit key={commit.sha} commit={commit} />
+                        <Commit key={commit.sha} commit={commit} commitNumber={commit.commitNumber} />
                     ))}
                 </div>
             ) : (

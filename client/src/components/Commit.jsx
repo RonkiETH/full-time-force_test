@@ -5,11 +5,11 @@ const formatDate = dateString => {
     return new Date(dateString).toLocaleDateString(undefined, options);
 };
 
-const Commit = ({ commit }) => {
+const Commit = ({ commit, commitNumber }) => {
     console.log('Commit data:', commit);
     return (
         <div key={commit.sha} className="p-4 border rounded-lg shadow-md mb-4">
-            <strong className="block text-black text-lg mb-2">Commit:</strong>
+            <strong className="block text-black text-lg mb-2">Commit #{commitNumber}</strong>
             <a
                 href={`https://github.com/RonkiETH/full-time-force_test/commit/${commit.sha}`}
                 target="_blank"
